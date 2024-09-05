@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"  />
+</head>
+<body>
+    <div class="full-image" id="fullImgBox">
+        <img src="Photos/1.jpg" id="fullImg">
+        <i class="fa-solid fa-xmark" style="color: #ffffff;" onclick="closeFullImg()"></i>
+    </div>
+    <div class="container">
+        <div class="heading">
+            <h3>Photo <span>Gallery</span></h3>
+        </div>
+        <div class="box">
+            <div class="dream">
+                <img src="Photos/1.jpg" onclick="openFullImg(this.src)">
+                <img src="Photos/2.jpg" onclick="openFullImg(this.src)">
+                <img src="Photos/3.jpg" onclick="openFullImg(this.src)">
+                <img src="Photos/4.jpg" onclick="openFullImg(this.src)">
+                <img src="Photos/5.jpg" onclick="openFullImg(this.src)">
+            </div>
+            <div class="dream">
+                <img src="Photos/6.jpg" onclick="openFullImg(this.src)">
+                <img src="Photos/7.jpg" onclick="openFullImg(this.src)">
+                <img src="Photos/8.jpeg"onclick="openFullImg(this.src)">
+                <img src="Photos/9.jpg" onclick="openFullImg(this.src)">
+                <img src="Photos/10.jpg"onclick="openFullImg(this.src)">
+            </div>
+            <div class="dream">
+                <img src="Photos/11.jpg"onclick="openFullImg(this.src)">
+                <img src="Photos/12.jpg"onclick="openFullImg(this.src)">
+                <img src="Photos/13.jpeg"onclick="openFullImg(this.src)">
+                <img src="Photos/14.jpeg"onclick="openFullImg(this.src)">
+                <img src="Photos/15.jpg" onclick="openFullImg(this.src)">
+            </div>
+        </div>
+        <div class="btn">
+            <a href="#">More</a>
+        </div>
+    </div>
+    <script>
+        var fullImgBox = document.getElementById("fullImgBox");
+        var fullImg = document.getElementById("fullImg");
+
+        function openFullImg(pic){
+            fullImgBox.style.display="flex";
+            fullImg.src=pic;
+        }
+
+        function closeFullImg(){
+            fullImgBox.style.display="none";
+        }
+    </script>
+</body>
+</html>
